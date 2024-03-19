@@ -21,7 +21,7 @@ os.environ["SFTPATH"] = os.environ['HOME'] + \
     '/local/'
 
 os.environ["CXXFLAGS"] = '-march=native -O3 -DNDEBUG'
-os.environ["OPENMP_CXX_FLAGS"] = '-fopenmp'  # -qopenmp for intel compiler
+os.environ["OPENMP_CXX_FLAGS"] = '-Xclang -fopenmp -lomp'  # -qopenmp for intel compiler
 
 
 ##################################

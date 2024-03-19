@@ -18,6 +18,7 @@ Treedump*
 **.tar.gz
 **.tar.bz2
 **__pycache__/
+CMakeFiles/
 
 # postprocessing files
 **.mtx

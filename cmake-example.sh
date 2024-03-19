@@ -8,8 +8,8 @@ cmake \
   -D CMAKE_C_COMPILER=mpicc \
   -D CMAKE_BUILD_TYPE=Release \
   -D CMAKE_CXX_FLAGS="-O3 -march=native -DNDEBUG" \
-  -D CMAKE_INSTALL_PREFIX="/your/installation/location" \
-  -D SFTPATH="/your/dependency/library/location" \
+  -D CMAKE_INSTALL_PREFIX="${HOME}/local/aLENS"\
+  -D SFTPATH="${HOME}/local"\
 ../
 
 ## Debug
