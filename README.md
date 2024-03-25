@@ -10,6 +10,7 @@ Further code documentation can be found [here](https://lamsoa729-alens.readthedo
 # Running aLENS on a single laptop or desktop
 
 A full quickstart tutorial is available at https://lamsoa729-alens.readthedocs.io/en/latest/quickstart.html.
+Note to compile aLENS the CMakeCache.txt file must be edited to point to the correct location of the vtk and Trilinos library. The file is currently configured to work on a specific mac.
 
 ## Setting up an aLENS docker container
 
@@ -48,7 +49,7 @@ The executable `aLENS.X` reads expects 4 input files:
 
 You can go to the folder `Examples/MixMotorSliding` to see examples of these files.
 
-The two `Config.yaml` files are necessary, but the two `Initial.dat` files are optional.  
+The two `Config.yaml` files are necessary, but the two `Initial.dat` files are optional.
 There are three cases:
 
 - Case 1. No `.dat` file exists. In this case rods and proteins will be generated according to the settings in `RunConfig.yaml` and `ProteinConfig.yaml`

@@ -19,6 +19,10 @@ Treedump*
 **.tar.bz2
 **__pycache__/
 CMakeFiles/
+**.cmake
+Makefile
+_deps/
+gitversion.txt
 
 # postprocessing files
 **.mtx
@@ -49,4 +53,3 @@ doc/
 **.**vtk
 **.**vtr
 **.**vd
-

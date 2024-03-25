@@ -8,9 +8,9 @@ import multiprocessing
 install = True  # compile only or compile + install
 use_openblas = False   # use OpenBLAS by default, set to False if you use MKL
 # enable_packages = ['boost', 'eigen', 'trilinos', 'vtk']
-enable_packages = ['eigen', 'trilinos', 'vtk']
-# enable_packages = ['eigen']
-# enable_packages = ['trilinos']
+# enable_packages = ['eigen', 'trilinos', 'vtk']
+# enable_packages = ['vtk']
+enable_packages = ['trilinos']
 
 # your installation destination, use ABSOLUTE PATH
 ##From
@@ -46,7 +46,7 @@ else:
     print("Enable MKL")
     if 'MKLROOT' in os.environ:
         os.environ['MKL_INCLUDE_DIRS'] = os.environ['MKLROOT']+'/include'
-        os.environ['MKL_LIB_DIRS'] = os.environ['MKLROOT']+'/lib/intel64'
+        os.environ['MKL_LIB_DIRS'] = os.environ['MKLROOT']+'/lib'
     elif 'MKL_INCLUDE_DIRS' in os.environ and 'MKL_LIB_DIRS' in os.environ:
         pass
     else:
@@ -129,7 +129,7 @@ if 'trilinos' in enable_packages:
         folder = 'build_trilinos_MKL'
         run('rm -rf ./{} && mkdir ./{}'.format(folder, folder))
         os.chdir(folder)
-        run('bash ../cmake-Trilinos-MKL.sh && make -j' +
+        run('bash ../cmake-Trilinos-MKL_mac.sh && make -j' +
             str(make_jobs)+'  >> '+log+'  2>>'+err)
         if install:
             run('make install'+' >> '+log+'  2>>'+err)
