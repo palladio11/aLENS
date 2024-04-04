@@ -31,7 +31,7 @@ cmake \
     -D TPL_ENABLE_MKL:BOOL=OFF \
     -D BLA_STATIC:BOOL=ON \
     -D BLA_VENDOR:STRING="OpenBLAS" \
-    -D TPL_BLAS_LIBRARIES:PATH="$OPENBLAS_BASE/lib/libopenblas.so" \
-    -D TPL_LAPACK_LIBRARIES:PATH="$OPENBLAS_BASE/lib/libopenblas.so" \
+    -D TPL_BLAS_LIBRARIES:PATH="/usr/lib/x86_64-linux-gnu/libopenblas.so" \
+    -D TPL_LAPACK_LIBRARIES:PATH="/usr/lib/x86_64-linux-gnu/libopenblas.so" \
     $EXTRA_ARGS \
     $TRILINOS_PATH

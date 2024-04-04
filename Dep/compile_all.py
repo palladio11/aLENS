@@ -10,7 +10,7 @@ use_openblas = False   # use OpenBLAS by default, set to False if you use MKL
 # enable_packages = ['boost', 'eigen', 'trilinos', 'vtk']
 enable_packages = ['eigen', 'trilinos', 'vtk']
 # enable_packages = ['eigen']
-# enable_packages = ['trilinos']
+#enable_packages = ['trilinos']
 
 # your installation destination, use ABSOLUTE PATH
 ##From
